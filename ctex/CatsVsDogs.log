@@ -1,0 +1,450 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.3.17)  8 JUL 2019 20:52
+entering extended mode
+**C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/CatsVsDogs.tex
+(C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/CatsVsDogs.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(D:\latex\CTEX\MiKTeX\tex\latex\base\article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(D:\latex\CTEX\MiKTeX\tex\latex\base\size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\cjk\CJK.sty
+Package: CJK 2008/12/29 4.8.2
+
+(D:\latex\CTEX\MiKTeX\tex\latex\cjk\mule\MULEenc.sty
+Package: MULEenc 2008/12/29 4.8.2
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\cjk\CJK.enc
+File: CJK.enc 2008/12/29 4.8.2
+)
+LaTeX Info: Redefining \selectfont on input line 756.
+\CJK@indent=\box26
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(D:\latex\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(D:\latex\CTEX\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(D:\latex\CTEX\MiKTeX\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(D:\latex\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(D:\latex\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count88
+\float@exts=\toks15
+\float@box=\box27
+\@float@everytoks=\toks16
+\@floatcapt=\box28
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\tools\indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\cjk\standard.bdg
+File: standard.bdg 2008/12/29 4.8.2
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\cjk\extended.enc
+File: extended.enc 2008/12/29 4.8.2
+)
+(D:\latex\CTEX\MiKTeX\tex\latex\cjk\extended.chr
+File: extended.chr 2008/12/29 4.8.2
+)
+(C:\Users\hacker\Desktop\Êñ∞Âª∫Êñá‰ª∂Â§π\DogsVsCats\ctex\CatsVsDogs.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+(D:\latex\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count89
+\scratchdimen=\dimen105
+\scratchbox=\box29
+\nofMPsegments=\count90
+\nofMParguments=\count91
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count92
+\MPscratchDim=\dimen106
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
+\everyMPtoPDFconversion=\toks18
+)
+LaTeX Font Info:    Try loading font information for C19+song on input line 12.
+
+ (D:\latex\CTEX\CTeX\tex\latex\CJK\GB\c19song.fd
+File: c19song.fd 2009/09/23 4.8.2
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 12.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 12.
+
+Overfull \hbox (8.1243pt too wide) in paragraph at lines 21--22
+\C19/song/m/n/10/55 £ \C19/song/m/n/10/37 O \C19/song/m/n/10/46 ø \C19/song/m/n
+/10/54 m \C19/song/m/n/10/43 ) \C19/song/m/n/10/47  \C19/song/m/n/10/40 \OT1/
+cmr/m/n/10 88.8%\C19/song/m/n/10/26 ß \C19/song/m/n/10/63 2 \C19/song/m/n/10/40
+ \OT1/cmr/m/n/10 2014\C19/song/m/n/10/51 c\OT1/cmr/m/n/10 VGG \C19/song/m/n/10
+/40 \OT1/cmr/m/n/10 92.7%\C19/song/m/n/10/43 ⁄ \C19/song/m/n/10/57 ” \C19/song
+/m/n/10/51 c \C19/song/m/n/10/40 \OT1/cmr/m/n/10 GoogLeNet\C19/song/m/n/10/40 
+\OT1/cmr/m/n/10 93.3%\C19/song/m/n/10/26 ß
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 32.
+(D:\latex\CTEX\MiKTeX\tex\latex\base\omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
+ [1
+
+{D:/latex/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 47.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 47.
+
+<images_pre.png, id=41, 725.109pt x 470.9595pt>
+File: images_pre.png Graphic file (type png)
+ <use images_pre.png>
+Package pdftex.def Info: images_pre.png used on input line 71.
+(pdftex.def)             Requested size: 326.29604pt x 211.92981pt.
+ [2]
+<images_resize.png, id=52, 674.52pt x 476.37975pt>
+File: images_resize.png Graphic file (type png)
+ <use images_resize.png>
+Package pdftex.def Info: images_resize.png used on input line 82.
+(pdftex.def)             Requested size: 303.53119pt x 214.3689pt.
+
+[3 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/images_pre.png> <C:
+/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/images_resize.png>]
+<single.png, id=58, 292.09125pt x 177.0615pt>
+File: single.png Graphic file (type png)
+ <use single.png>
+Package pdftex.def Info: single.png used on input line 129.
+(pdftex.def)             Requested size: 116.83441pt x 70.82332pt.
+ [4 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/single.png>]
+Overfull \hbox (7.63922pt too wide) in paragraph at lines 137--138
+[]\OT1/cmr/m/n/10 f\C19/song/bx/n/10/58 è \C19/song/bx/n/10/45 - \C19/song/m/n/
+10/44 π \C19/song/m/n/10/43 º \C19/song/bx/n/10/55 Í \C19/song/bx/n/10/26 ß \C1
+9/song/m/n/10/57 œ \C19/song/bx/n/10/38 ~ \C19/song/bx/n/10/58 è \C19/song/m/n/
+10/41 ö \C19/song/bx/n/10/59 Ç \C19/song/bx/n/10/60 5 \C19/song/m/n/10/43 º \C1
+9/song/bx/n/10/55 Í \C19/song/bx/n/10/25 " \C19/song/m/n/10/61 ò \C19/song/m/n/
+10/36 Ñ \C19/song/bx/n/10/62 k\OT1/cmr/m/n/10 relu\C19/song/bx/n/10/26 ß\OT1/cm
+r/m/n/10 sigmoid\C19/song/bx/n/10/26 ß\OT1/cmr/m/n/10 softmax\C19/song/bx/n/10/
+26 ß\OT1/cmr/m/n/10 tanh\C19/song/bx/n/10/40  
+ []
+
+<singleNet.png, id=63, 331.83975pt x 261.3765pt>
+File: singleNet.png Graphic file (type png)
+ <use singleNet.png>
+Package pdftex.def Info: singleNet.png used on input line 157.
+(pdftex.def)             Requested size: 132.73355pt x 104.54874pt.
+
+<nn.png, id=64, 285.4665pt x 252.945pt>
+File: nn.png Graphic file (type png)
+ <use nn.png>
+Package pdftex.def Info: nn.png used on input line 173.
+(pdftex.def)             Requested size: 114.18457pt x 101.17621pt.
+ [5 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/singleNet.png>]
+<cnn.png, id=69, 381.22424pt x 327.624pt>
+File: cnn.png Graphic file (type png)
+ <use cnn.png>
+Package pdftex.def Info: cnn.png used on input line 183.
+(pdftex.def)             Requested size: 152.48698pt x 131.04727pt.
+
+<ConvolutionalLayer.png, id=70, 465.53925pt x 257.763pt>
+File: ConvolutionalLayer.png Graphic file (type png)
+
+<use ConvolutionalLayer.png>
+Package pdftex.def Info: ConvolutionalLayer.png used on input line 198.
+(pdftex.def)             Requested size: 232.76904pt x 128.88118pt.
+ [6 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/nn.png> <C:/Users/
+hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/cnn.png>] <PoolingLayer.png, id=
+76, 345.6915pt x 274.02374pt>
+File: PoolingLayer.png Graphic file (type png)
+
+<use PoolingLayer.png>
+Package pdftex.def Info: PoolingLayer.png used on input line 213.
+(pdftex.def)             Requested size: 172.84532pt x 137.01154pt.
+ <Dropout.png, id=77, 242.1045pt x 252.945pt>
+File: Dropout.png Graphic file (type png)
+
+<use Dropout.png>
+Package pdftex.def Info: Dropout.png used on input line 222.
+(pdftex.def)             Requested size: 121.05196pt x 126.47218pt.
+ [7 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/ConvolutionalLayer
+.png> <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/PoolingLayer.png
+>] <Dense.png, id=84, 491.436pt x 260.172pt>
+File: Dense.png Graphic file (type png)
+ <use Dense.png>
+Package pdftex.def Info: Dense.png used on input line 232.
+(pdftex.def)             Requested size: 245.71739pt x 130.08566pt.
+
+<vgg.png, id=85, 398.6895pt x 399.29175pt>
+File: vgg.png Graphic file (type png)
+ <use vgg.png>
+Package pdftex.def Info: vgg.png used on input line 254.
+(pdftex.def)             Requested size: 239.21555pt x 239.57689pt.
+ [8 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Dropout.png (PNG c
+opy)> <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Dense.png>]
+Overfull \hbox (12.56963pt too wide) in paragraph at lines 262--263
+[]\C19/song/bx/n/10/48 | \C19/song/bx/n/10/62 ^ \C19/song/m/n/10/37 Ì \C19/song
+/bx/n/10/38  \C19/song/bx/n/10/51  \C19/song/m/n/10/47 ¨ \C19/song/bx/n/10/26
+ ß \C19/song/m/n/10/47 å \C19/song/bx/n/10/61 ± \C19/song/bx/n/10/60 ‘ \C19/son
+g/bx/n/10/48 ˆ\OT1/cmr/m/n/10 152\C19/song/bx/n/10/38   \C19/song/bx/n/10/40  
+\C19/song/m/n/10/37 Ì \C19/song/bx/n/10/38  \C19/song/bx/n/10/58  \C19/song/b
+x/n/10/49 ‰ \C19/song/bx/n/10/25 " \C19/song/m/n/10/52 Ÿ \C19/song/m/n/10/65 O 
+\C19/song/bx/n/10/54 ( \C19/song/bx/n/10/40 › \C19/song/m/n/10/37 '\OT1/cmr/m/n
+/10 VGG\C19/song/bx/n/10/43 ⁄\OT1/cmr/m/n/10 GoogLeNet\C19/song/bx/n/10/61 á
+ []
+
+<Resnet50.png, id=90, 646.21425pt x 277.63725pt>
+File: Resnet50.png Graphic file (type png)
+ <use Resnet50.png>
+Package pdftex.def Info: Resnet50.png used on input line 268.
+(pdftex.def)             Requested size: 387.73154pt x 166.58363pt.
+
+Overfull \hbox (42.73154pt too wide) in paragraph at lines 268--269
+ [][] 
+ []
+
+[9 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/vgg.png> <C:/Users/
+hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Resnet50.png>]
+<InceptionV3.png, id=96, 351.11176pt x 171.64125pt>
+File: InceptionV3.png Graphic file (type png)
+ <use InceptionV3.png>
+Package pdftex.def Info: InceptionV3.png used on input line 289.
+(pdftex.def)             Requested size: 210.66867pt x 102.98552pt.
+
+<Xception.png, id=97, 322.806pt x 183.084pt>
+File: Xception.png Graphic file (type png)
+ <use Xception.png>
+Package pdftex.def Info: Xception.png used on input line 299.
+(pdftex.def)             Requested size: 193.68509pt x 109.85124pt.
+
+Overfull \hbox (65.00034pt too wide) in paragraph at lines 306--307
+[]\C19/song/bx/n/10/42 ä \C19/song/bx/n/10/46 ‚ \C19/song/bx/n/10/59 ë \C19/son
+g/bx/n/10/51 8 \C19/song/bx/n/10/40  \C19/song/bx/n/10/61 á \C19/song/bx/n/10/
+53 ¶ \C19/song/bx/n/10/26 ß \C19/song/bx/n/10/60 I \C19/song/bx/n/10/61 á \C19/
+song/bx/n/10/63 3\OT1/cmr/m/n/10 kaggle\C19/song/m/n/10/37 ' \C19/song/bx/n/10/
+54 m ˛ \C19/song/bx/n/10/44 º \C19/song/bx/n/10/40  \C19/song/bx/n/10/53 c\OT1
+/cmr/m/n/10 10% \C19/song/bx/n/10/40  \C19/song/bx/n/10/38 § \C19/song/bx/n/10
+/45 1 \C19/song/bx/n/10/26 ß \C19/song/bx/n/10/55 ¶ \C19/song/bx/n/10/62 ^\OT1/
+cmr/m/n/10 Xception\C19/song/bx/n/10/43 ⁄\OT1/cmr/m/n/10 InceptionV3\C19/song/b
+x/n/10/58 
+ []
+
+[10 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/InceptionV3.png> <
+C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Xception.png (PNG copy)
+>]
+Overfull \hbox (0.22244pt too wide) in paragraph at lines 319--320
+\C19/song/bx/n/10/63 3\OT1/cmr/m/n/10 Dropout\C19/song/bx/n/10/38   \C19/song/b
+x/n/10/64 É \C19/song/bx/n/10/44   \C19/song/bx/n/10/39 á \C19/song/bx/n/10/45 
+Ô \C19/song/bx/n/10/61 ò \C19/song/bx/n/10/42 á \C19/song/bx/n/10/55   \C19/son
+g/bx/n/10/46 ≤ \C19/song/bx/n/10/63  \C19/song/bx/n/10/40  \C19/song/bx/n/10/
+54  \C19/song/bx/n/10/48 Û \C19/song/bx/n/10/46  \C19/song/bx/n/10/38   \C19/
+song/bx/n/10/26 ß \C19/song/bx/n/10/45 - \C19/song/bx/n/10/44 π \C19/song/bx/n/
+10/43 º \C19/song/bx/n/10/55 Í ¥ ¶ \C19/song/bx/n/10/62 ^\OT1/cmr/m/n/10 sigmoi
+d\C19/song/bx/n/10/25 " 
+ []
+
+<network.png, id=102, 204.16275pt x 377.0085pt>
+File: network.png Graphic file (type png)
+ <use network.png>
+Package pdftex.def Info: network.png used on input line 327.
+(pdftex.def)             Requested size: 102.08112pt x 188.50378pt.
+
+Overfull \hbox (15.93933pt too wide) in paragraph at lines 332--333
+\C19/song/bx/n/10/55 ¶ \C19/song/bx/n/10/62 ^ \C19/song/bx/n/10/49 
+\OT1/cmr/m/n/10 inception[]v3 \C19/song/bx/n/10/48 p \C19/song/m/n/10/50 °\OT1/
+cmr/m/n/10 preprocess[]input\C19/song/bx/n/10/40  \C19/song/bx/n/10/62 ˝ \C19/
+song/bx/n/10/39 ? \C19/song/bx/n/10/48 n \C19/song/bx/n/10/26 ß\OT1/cmr/m/n/10 
+keras\C19/song/bx/n/10/64 • \C19/song/bx/n/10/40 \OT1/cmr/m/n/10 preprocess[]i
+nput()\C19/song/m/n/10/47 å
+ []
+
+[11 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/network.png>]
+Overfull \hbox (3.02812pt too wide) in paragraph at lines 357--358
+[]\C19/song/m/n/10/65 Å \C19/song/bx/n/10/44   \C19/song/m/n/10/41 u \C19/song/
+bx/n/10/59 y \C19/song/bx/n/10/44 Ñ \C19/song/bx/n/10/55 ¥\OT1/cmr/m/n/10 Adam\
+C19/song/bx/n/10/40  \C19/song/m/n/10/37 L \C19/song/bx/n/10/59 y \C19/song/bx
+/n/10/60  \C19/song/bx/n/10/43 J \C19/song/m/n/10/65 Å \C19/song/bx/n/10/43 – 
+\C19/song/bx/n/10/26 ß \C19/song/bx/n/10/46 ( \C19/song/bx/n/10/43 J \C19/song/
+bx/n/10/40  \OT1/cmr/m/n/10 Logloss\C19/song/bx/n/10/58 è\OT1/cmr/m/n/10 0.05
+560\C19/song/bx/n/10/26 ß \C19/song/bx/n/10/63 3\OT1/cmr/m/n/10 kaggle
+ []
+
+<score.png, id=107, 861.2175pt x 160.1985pt>
+File: score.png Graphic file (type png)
+ <use score.png>
+Package pdftex.def Info: score.png used on input line 362.
+(pdftex.def)             Requested size: 344.4809pt x 64.07826pt.
+
+<model.png, id=108, 466.1415pt x 198.7425pt>
+File: model.png Graphic file (type png)
+ <use model.png>
+Package pdftex.def Info: model.png used on input line 369.
+(pdftex.def)             Requested size: 372.9137pt x 158.9942pt.
+
+Overfull \hbox (27.9137pt too wide) in paragraph at lines 369--370
+ [][] 
+ []
+
+[12 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/score.png>]
+[13 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/model.png>]
+[14] (C:\Users\hacker\Desktop\Êñ∞Âª∫Êñá‰ª∂Â§π\DogsVsCats\ctex\CatsVsDogs.aux) )
+ 
+Here is how much of TeX's memory you used:
+ 3201 strings out of 495354
+ 44850 string characters out of 3183523
+ 105163 words of memory out of 3000000
+ 6323 multiletter control sequences out of 15000+200000
+ 31392 words of font info for 107 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 27i,7n,29p,933b,764s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts
+/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.
+ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/f
+onts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/sim
+sun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CT
+eX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese
+/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTE
+X/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chi
+nese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex
+/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype
+/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/l
+atex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/true
+type/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><
+D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/
+truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.t
+tf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fo
+nts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/sims
+un.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTe
+X/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/
+simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX
+/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chin
+ese/simsun.ttf><D:/latex/CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/
+CTEX/CTeX/fonts/truetype/chinese/simsun.ttf><D:/latex/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmbx10.pfb><D:/latex/CTEX/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb><D:/latex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+D:/latex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/latex/CTEX/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/latex/CTEX/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><D:/latex/CTEX/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmr12.pfb><D:/latex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D
+:/latex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on CatsVsDogs.pdf (14 pages, 4857416 bytes).
+PDF statistics:
+ 249 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+

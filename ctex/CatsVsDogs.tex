@@ -1,0 +1,406 @@
+\documentclass{article}
+
+\usepackage{CJK}
+\usepackage{graphicx}
+\usepackage{float} %设置图片浮动位置的宏包
+\usepackage{indentfirst} %第一行开始缩进
+\begin{CJK*}{GBK}{song}%中文宏包
+\title{\Large 机器学习工程师 -- 猫狗大战}
+\author{韩旭 \quad 优达学城}
+
+\begin{document}
+\maketitle
+\setlength{\parindent}{2em} %第一行开始缩进
+\section{问题的定义}
+
+    \subsection{项目概述}
+    猫狗大战是2013年kaggle上的一个竞赛题目。目的是通过机器学习或者深度学习技术搭建可以识别图片并且能够正确对猫和狗进行分类的模型，这是一个属于计算机视觉领域二分类的模型。
+
+    深度学习技术是近几年兴起的技术，也是这些年人工智能领域取得的重大成就之一。现在已经在搜索引擎、机器翻译、图像识别、自然语言处理、无人驾驶这几个域逐步趋向成熟。
+
+    自从Alex和他的导师Hinton在2012年的ImageNet大规模图像识别竞赛中以超过第二名10个百分点的成绩(83.6\%的Top5精度)碾压第二名（74.2\%，使用传统的计算机视觉方法）后，深度学习真正开始火热，卷积神经网络开始成为家喻户晓的名字，从12 年的AlexNet（83.6\%），到2013年ImageNet大规模图像识别竞赛冠军的88.8\%，再到2014年VGG 的92.7\%和同年的GoogLeNet的93.3\%，终于，到了2015年，在1000类的图像识别中，微软提出的残差网（ResNet）以96.43\%的Top5正确率，达到了超过人类的水平。
+
+    伴随着图像分类任务，还有另外一个更加有挑战的任务–图像检测，图像检测是指在分类图像的同时把物体用矩形框给圈起来。从14年到16 年，先后涌现出R-CNN,Fast R-CNN, Faster R-CNN, YOLO, SSD等知名框架，其检测平均精度，在计算机视觉一个知名数据集上PASCAL VOC上的检测平均精度，也从R-CNN的53.3\%，到Fast RCNN 的68.4\%，再到Faster R-CNN的75.9\%，最新实验显示，Faster RCNN结合残差网（Resnet-101），其检测精度可以达到83.8\%。深度学习检测速度也越来越快，从最初的RCNN 模型，处理一张图片要用2秒多，到Faster RCNN 的198毫秒/张，再到YOLO的155 帧/秒（其缺陷是精度较低，只有52.7\%），最后出来了精度和速度都较高的SSD，精度75.1\%，速度23 帧/秒。
+
+    \subsection{问题陈述}
+    这个项目需要识别出猫和狗，从本质上讲是一个二分类的问题，通过搭建卷积神经网络训练模型，先对图像进行打标签，然后使用神经网络进行训练，通过给定任何一张图片，达到识别出猫和狗的目的。
+
+    \paragraph{整个流程如下：}
+        \subsubsection{数据预处理}
+        \begin{itemize}
+
+        \item 从kaggle官方下载数据
+        \item 使用opencv对图片进行读取，裁剪成299*299的尺寸方便后续进行训练
+        \end{itemize}
+
+        \subsubsection{模型搭建}
+        对keras里面的预训练模型进行模型融合，对原有的数据集的权重进行优化，然后搭建最后的Dense层进行预测。
+        \begin{itemize}
+        \item 使用preprocess\_input函数对输入图片进行预测处理
+        \item 对InceptionV3和Xception进行模型融合
+        \item 在搭建好的模型后边搭建自己全链接层
+        \end{itemize}
+
+    \subsection{评价指标}
+    kaggle官方采用对数损失来衡量：
+
+    $LogLoss = -\frac{1}{n}  \sum_i^n [y_i log(1-y_i)  + (1-y_i) log(y_i)]$
+
+    其中：
+
+    \begin{itemize}
+    \item n是图片数量
+    \item $\hat{y}_i$是模型预测为狗的概率
+    \item $y_i$是类别标签，1 对应狗，0 对应猫
+    \item $log()$ 表示自然对数
+    \end{itemize}
+
+    LogLoss越小的模型也就更加的鲁棒，所以LogLoss 可以用来评估这个项目。
+
+\section{分析}
+
+
+    \subsection{探索性可视化}
+
+    kaggle提供的文件含了两个数据集，test.zip and train.zip。train.zip里面包含了12500猫的照片和12500张狗的照片,每张照片的文件名中都包含有dog 或者cat 的标签。test.zip里有有12500张照片，文件名中没有标签。
+
+    这里是随机对图片进行读取:
+
+    \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+    \centering %图片居中
+    \includegraphics[scale=0.45]{images_pre}
+    \caption{随机读取未处理的数据}
+    \end{figure}
+
+
+
+    刚刚的随机读取发现图片尺寸不一，有些图片还有遮挡物，还有些不是猫狗的图片混在一起了。
+    尝试对数据集里的所有数据进行裁剪成299*299，来适应后边的神经网络模型。
+
+     \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+    \centering %图片居中
+    \includegraphics[scale=0.45]{images_resize.png}
+    \caption{resize之后的数据}
+    \end{figure}
+
+    \subsection{算法和技术}
+        \subsubsection{深度学习、神经网络简介}
+        \paragraph{深度学习} \
+
+        深度学习是机器学习的一个子领域，是一种以人工神经网络为基础，不断从错误中学习的一种计算机算法,今年来深度学习甚至独立于机器学习成为了一个全新的领域，主要用来处理线性不可分的问题。
+
+        深度学习和神经网络的概念最早可以追溯到上个世纪，最早来自于心理学和控制论的知识。随着时间的发展，逐渐诞生了从感知器为基础的卷积神经网络，循环神经网络， 长短期神经网络这些技巧。随着alpha和李世石一战成名，深度学习越来越为大家所熟知，
+
+
+        而今天，深度学习在计算机视觉，自然语言处理，数据挖掘，无人驾驶，音视频算法等领域都有了广泛的应用。
+
+        \paragraph{人工神经网络} \
+
+        人工神经网络是深度学习的基础，从最早的感知器概念的提出到现在的CNN，RNN，LSTM经历了很长一段时间。早的感知器的提出是基于动物神经元的模型，由此奠定了深度学习的基础。
+
+
+        神经网络由众多个神经元组成，大致上可以分为三个部分，第一层的神经网络叫做输入层，最后一层的网络叫做输出层，中间的部分是最复杂的，通常把它看作一个黑箱，这个就是隐藏层。通常来说，每一个神经元在参与训练的时候有一个权重，而训练神经网络的目的就是寻找合适的神经元权重，来提高神经网络对回归和分类的泛化能力。这个这些权重经过这层计算之后又会传导到下一层神经元，这就类似生物体的神经冲动。这个时候往往还有一些激活函数，常见的激活函数及其功能如下:
+
+        \begin{tabular}{|c|c|}% 通过添加 | 来表示是否需要绘制竖线
+        \hline  % 在表格最上方绘制横线
+        激活函数&功能\\
+        \hline  %在第一行和第二行之间绘制横线
+        sigmoid&用在二分类问题中，预测正负样本的概率\\
+        \hline  %在第一行和第二行之间绘制横线
+        softmax&用于多分类问题的概率预测\\
+        \hline % 在表格最下方绘制横线
+        relu &用来加快训练速度，防止梯度消失\\
+        \hline
+        tanh &把sigmoid的图像缩放到（-1，1）之间 \\
+        \hline
+        softplus & relu的平滑，比神经元更接近于脑神经元的激活模型\\
+        \hline
+        \end{tabular}
+
+
+        %一部分最成功的深度学习方法涉及到对人工神经网络的运用。人工神经网络（Artificial Neural Network，ANN），简称神经网络（Neural Network，NN)，在机器学习和认知科学领域，是一种模仿生物神经网络的结构和功能的数学模型或计算模型，用于对函数进行估计或近似。神经网络由大量的人工神经元联结进行计算。大多数情况下人工神经网络能在外界信息的基础上改变内部结构，是一种自适应系统，通俗的讲就是具备学习功能。现代神经网络是一种非线性统计性数据建模工具，神经网络通常是通过一个基于数学统计学类型的学习方法（Learning Method）得以优化，所以也是数学统计学方法的一种实际应用，通过统计学的标准数学方法我们能够得到大量的可以用函数来表达的局部结构空间，另一方面在人工智能学的人工感知领域，我们通过数学统计学的应用可以来做人工感知方面的决定问题（也就是说通过统计学的方法，人工神经网络能够类似人一样具有简单的决定能力和简单的判断能力），这种方法比起正式的逻辑学推理演算更具有优势。
+
+
+        %通常来说，一个人工神经元网络是由一个多层神经元结构组成，每一层神经元拥有输入（它的输入是前一层神经元的输出）和输出，每一层（我们用符号记做）Layer(i)是由Ni(Ni代表在第i层上的N) 个网络神经元组成，每个Ni上的网络神经元把对应在Ni-1上的神经元输出做为它的输入，我们把神经元和与之对应的神经元之间的连线用生物学的名称，叫做突触（Synapse），在数学模型中每个突触有一个加权数值，我们称做权重，那么要计算第i层上的某个神经元所得到的势能等于每一个权重乘以第i-1层上对应的神经元的输出，然后全体求和得到了第i层上的某个神经元所得到的势能，然后势能数值通过该神经元上的激活函数（activation function，常是∑函数（Sigmoid function）以控制输出大小，因为其可微分且连续，方便差量规则（Delta rule）处理。），求出该神经元的输出，注意的是该输出是一个非线性的数值，也就是说通过激励函数求的数值根据极限值来判断是否要激活该神经元，换句话说我们对一个神经元网络的输出是否线性不感兴趣。
+
+        \subparagraph{神经元}  \
+            \begin{figure}[H] %H为当前位置，!htb 为忽略美学标准，htbp为浮动图形
+            \centering %图片居中
+            \includegraphics[scale=0.4]{single.png} %插入图片，[] 中设置图片大小，{}中是图片文件名
+            \caption{单个神经元模型} %最终文档中希望显示的图片标题
+            \end{figure}
+
+            \begin{itemize}
+            \item a1\~{} an为输入向量的各个分量
+            \item w1\~{} wn为神经元各个突触的权值
+            \item b为偏置
+            \item f为激活函数，通常为非线性函数。一般有relu，sigmoid，softmax，tanh等
+            \item t为神经元输出
+            \end{itemize}
+
+            数学表示为：$t = f(W^{T} * A + b)$
+            \begin{itemize}
+            \item $W^{T}$代表权重
+            \item A代表输入
+            \item b为偏置
+            \item f为激活函数
+            \item t为神经元输出
+            \end{itemize}
+        \subparagraph{单层神经元网络}\
+
+        单层神经网络是最简的神经网络模型，有且仅有一层神经元组成，每个的神经元和输入向量的每个元素都有
+一一对应的关闭，按照这个方法来说，单层神经元网络的输入向量的维数和网络的维数相同。
+      %  单层神经元是最基本的神经元网络形式，由有限个神经元构成，所有神经元的输入向量都是同一个向量。由于每一个神经元都会产生一个标量结果，所以单层神经元的输出是一个向量，向量的维数等于神经元的数目。
+
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.4]{singleNet.png} %插入图片，[]中设置图片大小，{}中是图片文件名
+        \caption{单个神经元模型} %最终文档中希望显示的图片标题
+        \end{figure}
+
+        \subparagraph{多层神经元网络}\
+
+        一种常见的多层结构的前馈网络由三部分组成。
+
+        \begin{itemize}
+        \item 输入层：神经元接受来自样本的数据（图片或者数据），这个被称之为输入向量。
+        \item 输出层：输出神经网络经过计算返回的结果。输出的消息称为输出向量。
+        \item 隐藏层：通常有很多层组成，神经网络中间的部分，中小型神经网络中，隐藏层的数量常常有几十万到几百万不等。
+        \end{itemize}
+
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.4]{nn.png} %插入图片，[]中设置图片大小，{}中是图片文件名
+        \caption{神经网络基本结构} %最终文档中希望显示的图片标题
+        \end{figure}
+
+        \subsubsection{卷积神经网络原理}
+        卷积神经网络相对传统神经网络来说，多出了一个或者多个的卷积层，同时也在网络变添加了池化层来把网络来适应输入的二维数据。利用卷积核可以图片的特征来进行提取。
+                %卷积神经网络（convolutional neural networks，CNN）由一个或多个卷积层和顶端的全连通层（对应经典的神经网络）组成，同时也包括关联权重和池化层（pooling layer）。这一结构使得卷积神经网络能够利用输入数据的二维结构。与其他深度学习结构相比，卷积神经网络在图像和语音识别方面能够给出更优的结果。这一模型也可以使用反向传播算法进行训练。相比较其他深度、前馈神经网络，卷积神经网络需要估计的参数更少，使之成为一种颇具吸引力的深度学习结构。
+
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+        \centering %图片居中p
+        \includegraphics[scale=0.4]{cnn.png} %插入图片，[]中设置图片大小，{}中是图片文件名
+        \caption{卷积神经网络模型} %最终文档中希望显示的图片标题
+        \end{figure}
+
+        \paragraph{卷积层(Convolutional Layer)} \
+%
+%        卷积神经网络中每层卷积层由若干卷积单元组成，每个卷积单元的参数都是通过反向传播算法最佳化得到的。卷积运算的目的是提取输入的不同特征，第一层卷积层可能只能提取一些低级的特征如边缘、线条和角等层级，更多层的网路能从低级特征中迭代提取更复杂的特征。
+
+        卷积层由若干个卷积算子组成，主要用于提取图片的特征，而卷积有层层递进的效果，比如第一次提取边缘，第二次提取稍微清晰的特征，每一个提取的特征都会比上一次的特征更加鲜明。
+        
+        目标检测中常常把全链接层换成卷积层，因为全连接层的权重是不变的，所以输入的图片大小不能变。而卷积层的感受野是不断变化的，随着卷积核的移动来获取不同位置对应的特征信息，这样就突破了输入尺寸的限制，就获得了目标的位置信息。可以高效地对测试图像做滑动窗式的预测.
+可以高效的检测多个目标和给出位置信息。
+         %卷积层
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.5]{ConvolutionalLayer.png}
+        \caption{卷积层}
+        \end{figure}
+
+        \paragraph{池化层(Pooling Layer)} \
+
+        池化层是一种有效防止过拟合的方法，大致分为全局池化，最大池化和平均池化。最大池化取滑动窗口元素的最大值，平均池化取滑动窗口元素的平均值。为全局池化的窗口和这个整个视野窗口一样大，用于改变网络的维度。随身近些年来神经网络的发展，最大池化的应用已经越来广泛。经过池化层会减小图片的空间大小，进而把重要的特征保留出来，这样一来就有效的降低了神经网络中参数的个数，在一定程度上防止了过拟合网络的产生。
+        
+        
+
+        %池化（Pooling）是卷积神经网络中另一个重要的概念，它实际上是一种形式的降采样。有多种不同形式的非线性池化函数，而其中“最大池化（Max pooling）”是最为常见的。它是将输入的图像划分为若干个矩形区域，对每个子区域输出最大值。直觉上，这种机制能够有效地原因在于，在发现一个特征之后，它的精确位置远不及它和其他特征的相对位置的关系重要。池化层会不断地减小数据的空间大小，因此参数的数量和计算量也会下降，这在一定程度上也控制了过拟合。通常来说，CNN的卷积层之间都会周期性地插入池化层。
+%        池化层通常会分别作用于每个输入的特征并减小其大小。目前最常用形式的池化层是每隔2个元素从图像划分出  的区块，然后对每个区块中的4个数取最大值。这将会减少75\% 的数据量。
+
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.5]{PoolingLayer.png}
+        \caption{池化层}
+        \end{figure}
+
+        \paragraph{Droput层} \
+
+        大型的深度神经网络的深度往往很大，模型参数的数量也很多。然而过拟合往往是神经网络经常遇到的一些问题，神经网络中常常会用到防止过拟合的方法，Dropout就是其中之一。Dropout的主要思想就是在训练神经网络的过程中随机丢弃一些神经元，测试阶段，用训练好的网络对所有的测试样本进行前向操作.如softmax的实际输出值与理想输出值一致。减弱了相邻神经元之间的适应能力，提高了泛化能力。这就有效的降低了过拟合，而且相对其他正则化方法有了重大的改进。Dropout提高了基于监督学习的神经网络在视觉、语音识别和生物计算的准确率。
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.5]{Dropout.png}
+        \caption{Dropout层}
+        \end{figure}
+
+        \paragraph{Dense层} \
+
+
+        Dense用来对上一层的神经元进行全连接，对神经元的权重和神经元实现特征的非线性组合。
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.5]{Dense.png}
+        \caption{带有激活函数的Dense层}
+        \end{figure}
+
+        \subsubsection{迁移学习和Fine tune}
+        迁移学习是属于深度学习的一个子领域。它会用别人已经训练好的权重对自己功能相似的神经网络。比如这次的神经网络的预训练，猫狗大战是一个二分类的问题，那么我们可以使用ImageNet上边多分类的预训练模型和进行迁移学习。
+
+       % 比如说，用来辨识汽车的知识（或者是模型）也可以被用来提升识别卡车的能力。计算机领域的迁移学习和心理学常常提到的学习迁移在概念上有一定关系，但是两个领域在学术上的关系非常有限。
+
+        Fine-tuning和迁移学习大致相似，只不过fine-tuning会去掉网络的最后一层，然后加上自己的全连接层对网络结果进行输出。
+
+        预训练的模型花费时间更短，准确率更高。
+
+
+
+
+        \paragraph{VGG16} \
+
+        VGG16是由牛津大学提出的。亮点在于使用两个3*3的卷积核代替传统的5*5的卷积核。3*3卷积核有利于更好地保持图像性质。
+
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp 为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.6]{vgg.png}
+        \caption{VGG网络架构}
+        \end{figure}
+
+        \paragraph{Resnet50} \
+
+        ResNet主要使用3x3卷积，这点与VGG类似。在VGG基础上，短路连接插入进入形成残差网络。
+
+        利用残差模块，可以训练152层的残差网络。其准确度比VGG和GoogLeNet要高，但是计算效率也比VGG高。
+        
+%        ResNet 的每一个模块都由一系列层和一个捷径连接组成，这个捷径将该模块的输入和输出连接到了一起。然后在元素层面上执行加法运算，如果输入和输出的大小不同，那就可以使用零填充或投射（通过 1×1 卷积）来得到匹配的大小。
+
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp 为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.6]{Resnet50.png}
+        \caption{ResNet几种网络}
+        \end{figure}
+        
+        \paragraph{InceptionV3} \
+        
+        从InceptionV2到InceptionV3，图片的输入从224＊244变成了299＊299。另外还基于Inception的结构设计了采用一种并行的降维结构。
+        
+        相比Inception之前的版本，有如下更改：
+        
+        \begin{itemize}
+        \item 我们将传统的7×7卷积分解为3个3×3卷积
+        \item 对于网络的Inception部分，我们在35×35处有3个传统的Inception模块，每个模块有288个滤波器
+        \item 使用第5节中描述的网格缩减技术，这将缩减为17×17的网格，具有768个滤波器
+        \item 这之后是图5所示的5个分解的Inception模块实例。使用图10所示的网格缩减技术，这被缩减为8×8×1280的网格
+        \end{itemize}
+        
+        
+        
+         \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp 为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.6]{InceptionV3.png}
+        \caption{InceptionV3网络构架}
+        \end{figure}
+
+        \paragraph{Xception}\
+        
+        Xception是google继Inception后提出的对Inception v3的另一种改进，主要是采用depthwise separable convolution来替换原来Inception v3中的卷积操作。达到了在减少参数量的情况下增加模型的层数，既减少了存储空间，还增强了模型的表达能力。
+        
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp 为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.6]{Xception.png}
+        \caption{Xception网络}
+        \end{figure}
+      
+
+
+    \subsection{基准模型}
+    根据项目的要求，需要在kaggle比赛上获得前10\% 的成绩，使用Xception和InceptionV3网络模型去完成项目。这个比赛总共有1314只队伍参加，而此次毕业项目的要求是 kaggle Public Leaderboard 前10\%。所以logloss比第134名的0.06320 小就好。
+
+\section{方法}
+    \subsection{数据预处理}
+    \begin{itemize}
+    \item 使用opencv读取图像
+    \item 把图片裁剪成299*299 的大小来适应后续训练的模型
+    \item 使用sk-learn对训练集和测试集进行4:1的拆分
+    \end{itemize}
+    \subsection{执行过程}
+    \begin{itemize}
+    \item 导入Xception和InceptionV3和模型
+    \subitem 1.对连个模型进行简单的相加融合
+    \subitem 2.在去掉了最后一层的融合模型之后搭建Dropout层，参数使用0.3，在Dropout层之后搭建一个神经元的全链接层，激活函数是使用sigmoid。
+    \item 编译模型
+    \subitem 1. 优化器使用adam，二分类的loss使用binaryp\_crossentropyp
+    \subitem 2. 训练模型，并且使用过早停止，实际上训练了10代
+   \item 使用训练好的模型对测试集进行预测，提交到kaggle Leaderboard
+    \end{itemize}
+    \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.5]{network.png}
+        \caption{本次项目搭建的神经网络结构}
+
+        \end{figure}
+    \subsection{总结与完善}
+    一开始尝试了Resnet50和VGG16 去除最后一层然后冻结权重，自己搭建Dense层Dropout层，准确率可以达到98\%左右，但是Logloss太高，达不到项目的要求。后来就采用了对Xception和InceptionV3进行融合的方式，在一开始使用了inception\_v3 里面 preprocess\_input的预处理，keras中的preprocess\_input()可以函数完成数据预处理的工作，对样本执行逐样本均值消减的归一化，即在每个维度上减去样本的均值，这样就可以能够提高算法的运行效果。也就是由于这样，不同模型的预处理函数不同，之前训练的时候使用自己的预处理函数，不能很好的发挥出来fine-tune的效果。由于Xception 是 google 继 Inception 后提出的对 Inception v3 的另一种改进,所以二者可以使用一样的与处理函数。因为有了这个预处理方法，所以之前的图片通道转化是多余的，可以去掉。
+    
+    这个模型的准确率最终达到了99\% 以上，Logloss 也明显下降许多。其中Dropout 层冻结了0.3的神经元，Dense 层使用了sigmoid 来达到二分类的目的。 在过早停止的过程中打算训练100 代，当有5代val\_loss 不再下降的时候就停止训练，实际上只训练了10 代，val\_loss 稳定在了0.02 左右。
+    在这个基础上分别尝试四个不同的优化器：
+    Adam、 RMSprop、 Adadelta、 SGD，调整了不同的学习率，后来发现Adam的默认参数表现最好。加了BN 层之后虽然会加快模型收敛速度，但是在这里模型里发生了过拟合，所以最后去掉了BN 层。
+
+    四个优化器的Logloss表现结果如下：\
+
+    \begin{tabular}{|c|c|}% 通过添加 | 来表示是否需要绘制竖线
+    \hline  % 在表格最上方绘制横线
+  %  方法p& LR
+%    \hline  % 在表格最上方绘制横线
+    优化器&Logloss \\
+    \hline
+    Adam&0.05560 \\
+    \hline
+    RMSprop&0.5642\\
+    \hline \
+    Adadelta&0.0605 \\
+    \hline \
+    SGD&0.05770 \\
+    \hline
+    \end{tabular}
+
+\section{结果}
+最后发现还是Adam的表现效果最好，结果得到Logloss为0.05560，在kaggle 上排到96/1314的成绩，相当于Public Leaderboard7.3\%，基本上达到了项目要求。
+
+
+\begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+\centering %图片居中
+\includegraphics[scale=0.4]{score.png}
+\caption{在kaggle上提交的成绩}
+\end{figure}
+
+    \subsection{模型的评价与验证}
+    \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+    \centering %图片居中
+    \includegraphics[scale=0.8]{model.png}
+    \caption{在kaggle上提交的成绩}
+    \end{figure}
+
+    从图中可以看出来，利用融合模型的方法模型精度高出来很多，训练两次的时候训练集和验证集的准确度都可以达到99\%以上，由于加入了过早停止，当val\_loss不再下降的时候就不再训练了，而这里也就训练了10轮不到就已经满足训练要求了，再继续训练下去就会过拟合了。
+
+\section{项目结论}
+    \subsection{对项目的思考}
+    一开始采用了自己搭建的CNN模型，精度远远不够，后来尝试了Resnet，不过是在本机上跑，训练速度很慢，这里浪费了好多时间，而reset50再没有做异常值处理和数据增强的话也没有办法达到项目的要求。后来多次学习，对本来就表现很好的Xception 和InceptionV3进行简单模型融合，这个时间也比之前的短了很多。在此学习到利用前人发明的轮子会比自己从头开始效率高很多。
+    \subsection{需要作出的改进}
+    这个项目存在许多需要改进的地方，可以采取一下几种方式:
+
+    \begin{enumerate}
+    \item 对数据进行异常摘除，应该会使结果好很多
+    \item 对预训练模型进行微调
+    \item 对数据集进行数据增强
+    \item 采用更多正则化方法来防止过拟合
+    \item 使用更好的预训练模型来搭建网络
+    \end{enumerate}
+
+
+%下边是参考文献部分
+\renewcommand\refname{参考文献}
+\begin{thebibliography}{99}
+\bibitem{ref1}维基百科深度学习[Z]   https://zh.wikipedia.org/wiki/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0
+\bibitem{ref2}刘海洋.LATEX入门[M].  电子工业出版社. 2018年4月
+\bibitem{ref3}杨培文.深度学习技术图像处理入门[M]. 清华大学出版社.2018 年10月 : 134-154
+\bibitem{ref4}Francois Chollet.Xception: Deep Learning with Depthwise Separable Convolutions[R]. Francois Chollet.7 Oct 2016
+\bibitem{ref5}K. Simonyan and A. Zisserman, Very deep convolutional networks for large-scale image recognition[R]. in International Conference on Learning Representations, May 2015.
+\bibitem{ref6}Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna. Rethinking the Inception Architecture for Computer Vision[R].  Christian Szegedy.  2 Dec 2015
+\bibitem{ref7}Nitish Srivastava and Geoffrey Hinton and Alex Krizhevsky and Ilya Sutskever and Ruslan Salakhutdinov. Dropout: A Simple Way to Prevent Neural Networks from Overfitting[R]. Journal of Machine Learning Research.15 Jun 2014.
+\bibitem{ref8}Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun. Deep Residual Learning for Image Recognition[R]. Kaiming He.  10 Dec 2015
+\bibitem{ref9}范晓杰, 宣士斌, 唐凤. 基于Dropout卷积神经网络的行为识别[J]. 广西民族大学学报 (自然科学版), 2017, 23(1): 76-82
+\end{thebibliography}
+%\end{graphicx}
+\end{CJK*}
+
+\end{document}
