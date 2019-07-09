@@ -189,6 +189,9 @@
 %        卷积神经网络中每层卷积层由若干卷积单元组成，每个卷积单元的参数都是通过反向传播算法最佳化得到的。卷积运算的目的是提取输入的不同特征，第一层卷积层可能只能提取一些低级的特征如边缘、线条和角等层级，更多层的网路能从低级特征中迭代提取更复杂的特征。
 
         卷积层由若干个卷积算子组成，主要用于提取图片的特征，而卷积有层层递进的效果，比如第一次提取边缘，第二次提取稍微清晰的特征，每一个提取的特征都会比上一次的特征更加鲜明。
+
+        目标检测中常常把全链接层换成卷积层，因为全连接层的权重是不变的，所以输入的图片大小不能变。而卷积层的感受野是不断变化的，随着卷积核的移动来获取不同位置对应的特征信息，这样就突破了输入尺寸的限制，就获得了目标的位置信息。可以高效地对测试图像做滑动窗式的预测.
+可以高效的检测多个目标和给出位置信息。
          %卷积层
         \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
         \centering %图片居中
@@ -198,7 +201,9 @@
 
         \paragraph{池化层(Pooling Layer)} \
 
-        池化层是一种有效防止过拟合的方法，大致分为全局池化，最大池化和平均池化。随身近些年来神经网络的发展，最大池化的应用已经越来广泛。经过池化层会减小图片的空间大小，进而把重要的特征保留出来，这样一来就有效的降低了神经网络中参数的个数，在一定程度上防止了过拟合网络的产生。
+        池化层是一种有效防止过拟合的方法，大致分为全局池化，最大池化和平均池化。最大池化取滑动窗口元素的最大值，平均池化取滑动窗口元素的平均值。为全局池化的窗口和这个整个视野窗口一样大，用于改变网络的维度。随身近些年来神经网络的发展，最大池化的应用已经越来广泛。经过池化层会减小图片的空间大小，进而把重要的特征保留出来，这样一来就有效的降低了神经网络中参数的个数，在一定程度上防止了过拟合网络的产生。
+
+
 
         %池化（Pooling）是卷积神经网络中另一个重要的概念，它实际上是一种形式的降采样。有多种不同形式的非线性池化函数，而其中“最大池化（Max pooling）”是最为常见的。它是将输入的图像划分为若干个矩形区域，对每个子区域输出最大值。直觉上，这种机制能够有效地原因在于，在发现一个特征之后，它的精确位置远不及它和其他特征的相对位置的关系重要。池化层会不断地减小数据的空间大小，因此参数的数量和计算量也会下降，这在一定程度上也控制了过拟合。通常来说，CNN的卷积层之间都会周期性地插入池化层。
 %        池化层通常会分别作用于每个输入的特征并减小其大小。目前最常用形式的池化层是每隔2个元素从图像划分出  的区块，然后对每个区块中的4个数取最大值。这将会减少75\% 的数据量。
@@ -211,7 +216,7 @@
 
         \paragraph{Droput层} \
 
-        大型的深度神经网络的深度往往很大，模型参数的数量也很多。然而过拟合往往是神经网络经常遇到的一些问题，神经网络中常常会用到防止过拟合的方法，Dropout就是其中之一。Dropout的主要思想就是在训练神经网络的过程中随机丢弃一些神经元，减弱了相邻神经元之间的适应能力，提高了泛化能力。这就有效的降低了过拟合，而且相对其他正则化方法有了重大的改进。Dropout提高了基于监督学习的神经网络在视觉、语音识别和生物计算的准确率。
+        大型的深度神经网络的深度往往很大，模型参数的数量也很多。然而过拟合往往是神经网络经常遇到的一些问题，神经网络中常常会用到防止过拟合的方法，Dropout就是其中之一。Dropout的主要思想就是在训练训练阶段在神经网络中随机丢弃一些神经元，测试阶段，测试阶段对所有神经元的输出和按dropout比例取值。这样就减弱了相邻神经元之间的适应能力，提高了泛化能力。并且有效的降低了过拟合，而且相对其他正则化方法有了重大的改进。Dropout 提高了基于监督学习的神经网络在视觉、语音识别和生物计算的准确率。
         \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
         \centering %图片居中
         \includegraphics[scale=0.5]{Dropout.png}
@@ -234,36 +239,67 @@
        % 比如说，用来辨识汽车的知识（或者是模型）也可以被用来提升识别卡车的能力。计算机领域的迁移学习和心理学常常提到的学习迁移在概念上有一定关系，但是两个领域在学术上的关系非常有限。
 
         Fine-tuning和迁移学习大致相似，只不过fine-tuning会去掉网络的最后一层，然后加上自己的全连接层对网络结果进行输出。
-        
+
         预训练的模型花费时间更短，准确率更高。
 
-       
 
 
-        \paragraph{VGG16}
-        
+
+        \paragraph{VGG16} \
+
         VGG16是由牛津大学提出的。亮点在于使用两个3*3的卷积核代替传统的5*5的卷积核。3*3卷积核有利于更好地保持图像性质。
-        
+
         \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp 为浮动图形
         \centering %图片居中
-        \includegraphics[scale=0.5]{vgg.png}
+        \includegraphics[scale=0.6]{vgg.png}
         \caption{VGG网络架构}
         \end{figure}
-        
-        \paragraph{Resnet50}
+
+        \paragraph{Resnet50} \
+
         ResNet主要使用3x3卷积，这点与VGG类似。在VGG基础上，短路连接插入进入形成残差网络。
-        
-        利用残差模块，可以训练152层的残差网络。其准确度比VGG和GoogLeNet要高，但是计算效率也比VGG高。p
-        
+
+        利用残差模块，可以训练152层的残差网络。其准确度比VGG和GoogLeNet要高，但是计算效率也比VGG高。
+
+%        ResNet 的每一个模块都由一系列层和一个捷径连接组成，这个捷径将该模块的输入和输出连接到了一起。然后在元素层面上执行加法运算，如果输入和输出的大小不同，那就可以使用零填充或投射（通过 1×1 卷积）来得到匹配的大小。
+
         \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp 为浮动图形
         \centering %图片居中
-        \includegraphics[scale=0.4]{Resnet50.png}
+        \includegraphics[scale=0.6]{Resnet50.png}
         \caption{ResNet几种网络}
         \end{figure}
 
-        \paragraph{Xception}
+        \paragraph{InceptionV3} \
 
-        \paragraph{InceptionV3}
+        从InceptionV2到InceptionV3，图片的输入从224＊244变成了299＊299。另外还基于Inception的结构设计了采用一种并行的降维结构。
+
+        相比Inception之前的版本，有如下更改：
+
+        \begin{itemize}
+        \item 我们将传统的7×7卷积分解为3个3×3卷积
+        \item 对于网络的Inception部分，我们在35×35处有3个传统的Inception模块，每个模块有288个滤波器
+        \item 使用第5节中描述的网格缩减技术，这将缩减为17×17的网格，具有768个滤波器
+        \item 这之后是图5所示的5个分解的Inception模块实例。使用图10所示的网格缩减技术，这被缩减为8×8×1280的网格
+        \end{itemize}
+
+
+
+         \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp 为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.6]{InceptionV3.png}
+        \caption{InceptionV3网络构架}
+        \end{figure}
+
+        \paragraph{Xception}\
+
+        Xception是google继Inception后提出的对Inception v3的另一种改进，主要是采用depthwise separable convolution来替换原来Inception v3中的卷积操作。达到了在减少参数量的情况下增加模型的层数，既减少了存储空间，还增强了模型的表达能力。
+
+        \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp 为浮动图形
+        \centering %图片居中
+        \includegraphics[scale=0.6]{Xception.png}
+        \caption{Xception网络}
+        \end{figure}
+
 
 
     \subsection{基准模型}
@@ -288,12 +324,14 @@
     \end{itemize}
     \begin{figure}[H] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
         \centering %图片居中
-        \includegraphics[scale=0.6]{network.png}
-        \caption{神经网络结构}
+        \includegraphics[scale=0.5]{network.png}
+        \caption{本次项目搭建的神经网络结构}
 
         \end{figure}
     \subsection{总结与完善}
-    一开始尝试了Resnet50和VGG16 去除最后一层然后冻结权重，自己搭建Dense层Dropout层，准确率可以达到98\%左右，但是Logloss太高，达不到训练的要求。后来就采用了对Xception和InceptionV3进行融合的方式，在一开始使用了inception\_v3 里面 preprocess\_input的预处理，由于inception\_v3 和Xception的网络结构相似，而第一层图片接受的参数又都是299 * 299 * 3 ，所以可以使用一样的与处理函数，这个模型 的准确率最终达到了99\% 以上，Logloss 也明显下降许多。其中Dropout 层冻结了0.3的神经元，Dense 层使用了sigmoid 来达到二分类的目的。 在过早停止的过程中打算训练100 代，当有5代val\_loss 不再下降的时候就停止训练，实际上只训练了10 代，val\_loss 稳定在了0.02 左右。
+    一开始尝试了Resnet50和VGG16 去除最后一层然后冻结权重，自己搭建Dense层Dropout层，准确率可以达到98\%左右，但是Logloss太高，达不到项目的要求。后来就采用了对Xception和InceptionV3进行融合的方式，在一开始使用了inception\_v3 里面 preprocess\_input的预处理，keras中的preprocess\_input()可以函数完成数据预处理的工作，对样本执行逐样本均值消减的归一化，即在每个维度上减去样本的均值，这样就可以能够提高算法的运行效果。也就是由于这样，不同模型的预处理函数不同，之前训练的时候使用自己的预处理函数，不能很好的发挥出来fine-tune的效果。由于Xception 是 google 继 Inception 后提出的对 Inception v3 的另一种改进,所以二者可以使用一样的与处理函数。因为有了这个预处理方法，所以之前的图片通道转化是多余的，可以去掉。
+
+    这个模型的准确率最终达到了99\% 以上，Logloss 也明显下降许多。其中Dropout 层冻结了0.3的神经元，Dense 层使用了sigmoid 来达到二分类的目的。 在过早停止的过程中打算训练100 代，当有5 代val\_loss 不再下降的时候就停止训练，实际上只训练了10 代，val\_loss 稳定在了0.02 左右。
     在这个基础上分别尝试四个不同的优化器：
     Adam、 RMSprop、 Adadelta、 SGD，调整了不同的学习率，后来发现Adam的默认参数表现最好。加了BN 层之后虽然会加快模型收敛速度，但是在这里模型里发生了过拟合，所以最后去掉了BN 层。
 
@@ -360,6 +398,7 @@
 \bibitem{ref6}Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew Wojna. Rethinking the Inception Architecture for Computer Vision[R].  Christian Szegedy.  2 Dec 2015
 \bibitem{ref7}Nitish Srivastava and Geoffrey Hinton and Alex Krizhevsky and Ilya Sutskever and Ruslan Salakhutdinov. Dropout: A Simple Way to Prevent Neural Networks from Overfitting[R]. Journal of Machine Learning Research.15 Jun 2014.
 \bibitem{ref8}Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun. Deep Residual Learning for Image Recognition[R]. Kaiming He.  10 Dec 2015
+\bibitem{ref9}范晓杰, 宣士斌, 唐凤. 基于Dropout卷积神经网络的行为识别[J]. 广西民族大学学报 (自然科学版), 2017, 23(1): 76-82
 \end{thebibliography}
 %\end{graphicx}
 \end{CJK*}

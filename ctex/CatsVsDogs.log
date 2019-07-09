@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.3.17)  8 JUL 2019 20:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2019.3.17)  10 JUL 2019 07:37
 entering extended mode
 **C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/CatsVsDogs.tex
 (C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/CatsVsDogs.tex
@@ -297,42 +297,49 @@ Package pdftex.def Info: vgg.png used on input line 254.
 (pdftex.def)             Requested size: 239.21555pt x 239.57689pt.
  [8 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Dropout.png (PNG c
 opy)> <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Dense.png>]
-Overfull \hbox (12.56963pt too wide) in paragraph at lines 262--263
-[]\C19/song/bx/n/10/48 | \C19/song/bx/n/10/62 ^ \C19/song/m/n/10/37 Ì \C19/song
-/bx/n/10/38  \C19/song/bx/n/10/51  \C19/song/m/n/10/47 ¨ \C19/song/bx/n/10/26
- ß \C19/song/m/n/10/47 å \C19/song/bx/n/10/61 ± \C19/song/bx/n/10/60 ‘ \C19/son
-g/bx/n/10/48 ˆ\OT1/cmr/m/n/10 152\C19/song/bx/n/10/38   \C19/song/bx/n/10/40  
-\C19/song/m/n/10/37 Ì \C19/song/bx/n/10/38  \C19/song/bx/n/10/58  \C19/song/b
-x/n/10/49 ‰ \C19/song/bx/n/10/25 " \C19/song/m/n/10/52 Ÿ \C19/song/m/n/10/65 O 
-\C19/song/bx/n/10/54 ( \C19/song/bx/n/10/40 › \C19/song/m/n/10/37 '\OT1/cmr/m/n
-/10 VGG\C19/song/bx/n/10/43 ⁄\OT1/cmr/m/n/10 GoogLeNet\C19/song/bx/n/10/61 á
+<ResnetModel.png, id=90, 351.714pt x 224.63925pt>
+File: ResnetModel.png Graphic file (type png)
+ <use ResnetModel.png>
+Package pdftex.def Info: ResnetModel.png used on input line 264.
+(pdftex.def)             Requested size: 211.03003pt x 134.78458pt.
+
+Overfull \hbox (7.55571pt too wide) in paragraph at lines 270--271
+[]\OT1/cmr/m/n/10 Resnet50\C19/song/m/n/10/36 U \C19/song/bx/n/10/63 Ï ˘ \C19/s
+ong/bx/n/10/42 á \C19/song/bx/n/10/48 n \C19/song/bx/n/10/51 g \C19/song/bx/n/1
+0/55  \C19/song/bx/n/10/45 O \C19/song/bx/n/10/49 
+\OT1/cmr/m/n/10 152\C19/song/bx/n/10/38   \C19/song/bx/n/10/40  \C19/song/m/n/
+10/37 Ì \C19/song/bx/n/10/38  \C19/song/bx/n/10/58  \C19/song/bx/n/10/49 ‰ \C
+19/song/bx/n/10/26 ß \C19/song/m/n/10/56 è \C19/song/bx/n/10/54 , \C19/song/m/n
+/10/37 '\OT1/cmr/m/n/10 VGG\C19/song/bx/n/10/59 X \C19/song/bx/n/10/49  \C19/s
+ong/bx/n/10/42 p \C19/song/bx/n/10/49 
+\OT1/cmr/m/n/10 8\C19/song/m/n/10/37  \C19/song/bx/n/10/26 ß
  []
 
-<Resnet50.png, id=90, 646.21425pt x 277.63725pt>
+<Resnet50.png, id=91, 646.21425pt x 277.63725pt>
 File: Resnet50.png Graphic file (type png)
  <use Resnet50.png>
-Package pdftex.def Info: Resnet50.png used on input line 268.
+Package pdftex.def Info: Resnet50.png used on input line 276.
 (pdftex.def)             Requested size: 387.73154pt x 166.58363pt.
 
-Overfull \hbox (42.73154pt too wide) in paragraph at lines 268--269
+Overfull \hbox (42.73154pt too wide) in paragraph at lines 276--277
  [][] 
  []
 
 [9 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/vgg.png> <C:/Users/
-hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Resnet50.png>]
-<InceptionV3.png, id=96, 351.11176pt x 171.64125pt>
-File: InceptionV3.png Graphic file (type png)
- <use InceptionV3.png>
-Package pdftex.def Info: InceptionV3.png used on input line 289.
-(pdftex.def)             Requested size: 210.66867pt x 102.98552pt.
-
-<Xception.png, id=97, 322.806pt x 183.084pt>
+hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/ResnetModel.png>]
+<Inceptionv3.png, id=97, 505.89pt x 230.66174pt>
+File: Inceptionv3.png Graphic file (type png)
+ <use Inceptionv3.png>
+Package pdftex.def Info: Inceptionv3.png used on input line 297.
+(pdftex.def)             Requested size: 303.53633pt x 138.3981pt.
+ [10 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Resnet50.png>]
+<Xception.png, id=102, 322.806pt x 183.084pt>
 File: Xception.png Graphic file (type png)
  <use Xception.png>
-Package pdftex.def Info: Xception.png used on input line 299.
+Package pdftex.def Info: Xception.png used on input line 313.
 (pdftex.def)             Requested size: 193.68509pt x 109.85124pt.
 
-Overfull \hbox (65.00034pt too wide) in paragraph at lines 306--307
+Overfull \hbox (65.00034pt too wide) in paragraph at lines 320--321
 []\C19/song/bx/n/10/42 ä \C19/song/bx/n/10/46 ‚ \C19/song/bx/n/10/59 ë \C19/son
 g/bx/n/10/51 8 \C19/song/bx/n/10/40  \C19/song/bx/n/10/61 á \C19/song/bx/n/10/
 53 ¶ \C19/song/bx/n/10/26 ß \C19/song/bx/n/10/60 I \C19/song/bx/n/10/61 á \C19/
@@ -344,10 +351,10 @@ cmr/m/n/10 Xception\C19/song/bx/n/10/43 ⁄\OT1/cmr/m/n/10 InceptionV3\C19/song/b
 x/n/10/58 
  []
 
-[10 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/InceptionV3.png> <
+[11 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Inceptionv3.png> <
 C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/Xception.png (PNG copy)
 >]
-Overfull \hbox (0.22244pt too wide) in paragraph at lines 319--320
+Overfull \hbox (0.22244pt too wide) in paragraph at lines 333--334
 \C19/song/bx/n/10/63 3\OT1/cmr/m/n/10 Dropout\C19/song/bx/n/10/38   \C19/song/b
 x/n/10/64 É \C19/song/bx/n/10/44   \C19/song/bx/n/10/39 á \C19/song/bx/n/10/45 
 Ô \C19/song/bx/n/10/61 ò \C19/song/bx/n/10/42 á \C19/song/bx/n/10/55   \C19/son
@@ -358,14 +365,15 @@ song/bx/n/10/26 ß \C19/song/bx/n/10/45 - \C19/song/bx/n/10/44 π \C19/song/bx/n/
 d\C19/song/bx/n/10/25 " 
  []
 
-<network.png, id=102, 204.16275pt x 377.0085pt>
+<network.png, id=107, 204.16275pt x 377.0085pt>
 File: network.png Graphic file (type png)
  <use network.png>
-Package pdftex.def Info: network.png used on input line 327.
+Package pdftex.def Info: network.png used on input line 341.
 (pdftex.def)             Requested size: 102.08112pt x 188.50378pt.
-
-Overfull \hbox (15.93933pt too wide) in paragraph at lines 332--333
-\C19/song/bx/n/10/55 ¶ \C19/song/bx/n/10/62 ^ \C19/song/bx/n/10/49 
+ [12 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/network.png>]
+Overfull \hbox (75.93936pt too wide) in paragraph at lines 350--351
+[]\C19/song/bx/n/10/63 3 \C19/song/bx/n/10/61 ò \C19/song/m/n/10/47 m \C19/song
+/bx/n/10/55 © ¶ \C19/song/bx/n/10/62 ^ \C19/song/bx/n/10/49 
 \OT1/cmr/m/n/10 inception[]v3 \C19/song/bx/n/10/48 p \C19/song/m/n/10/50 °\OT1/
 cmr/m/n/10 preprocess[]input\C19/song/bx/n/10/40  \C19/song/bx/n/10/62 ˝ \C19/
 song/bx/n/10/39 ? \C19/song/bx/n/10/48 n \C19/song/bx/n/10/26 ß\OT1/cmr/m/n/10 
@@ -373,8 +381,22 @@ keras\C19/song/bx/n/10/64 • \C19/song/bx/n/10/40 \OT1/cmr/m/n/10 preprocess[]i
 nput()\C19/song/m/n/10/47 å
  []
 
-[11 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/network.png>]
-Overfull \hbox (3.02812pt too wide) in paragraph at lines 357--358
+
+Overfull \hbox (35.1557pt too wide) in paragraph at lines 350--351
+\C19/song/bx/n/10/61 ± \C19/song/bx/n/10/43 º \C19/song/bx/n/10/55 Í \C19/song/
+bx/n/10/58  \C19/song/bx/n/10/38 § \C19/song/bx/n/10/55 Í \C19/song/bx/n/10/46
+ ‚ \C19/song/bx/n/10/62 ˝ \C19/song/bx/n/10/39 ? \C19/song/bx/n/10/48 n \C19/so
+ng/bx/n/10/40  \C19/song/bx/n/10/42 Û \C19/song/m/n/10/65 ä \C19/song/bx/n/10/
+26 ß \C19/song/bx/n/10/40 È \C19/song/bx/n/10/61  \C19/song/bx/n/10/55 — \C19/
+song/bx/n/10/54 \ \C19/song/m/n/10/57 „ \C19/song/m/n/10/52 ° \C19/song/bx/n/10
+/46 ? \C19/song/bx/n/10/60 1 \C19/song/bx/n/10/43 8 \C19/song/bx/n/10/61 ò \C19
+/song/bx/n/10/44 z \C19/song/bx/n/10/26 ß \C19/song/bx/n/10/63 ˘ \C19/song/bx/n
+/10/48 p \C19/song/bx/n/10/40 \OT1/cmr/m/n/10 preprocess[]input()\C19/song/m/n
+/10/41 ê
+ []
+
+
+Overfull \hbox (3.02812pt too wide) in paragraph at lines 376--377
 []\C19/song/m/n/10/65 Å \C19/song/bx/n/10/44   \C19/song/m/n/10/41 u \C19/song/
 bx/n/10/59 y \C19/song/bx/n/10/44 Ñ \C19/song/bx/n/10/55 ¥\OT1/cmr/m/n/10 Adam\
 C19/song/bx/n/10/40  \C19/song/m/n/10/37 L \C19/song/bx/n/10/59 y \C19/song/bx
@@ -384,31 +406,31 @@ bx/n/10/40  \OT1/cmr/m/n/10 Logloss\C19/song/bx/n/10/58 è\OT1/cmr/m/n/10 0.05
 560\C19/song/bx/n/10/26 ß \C19/song/bx/n/10/63 3\OT1/cmr/m/n/10 kaggle
  []
 
-<score.png, id=107, 861.2175pt x 160.1985pt>
+<score.png, id=112, 861.2175pt x 160.1985pt>
 File: score.png Graphic file (type png)
  <use score.png>
-Package pdftex.def Info: score.png used on input line 362.
+Package pdftex.def Info: score.png used on input line 381.
 (pdftex.def)             Requested size: 344.4809pt x 64.07826pt.
 
-<model.png, id=108, 466.1415pt x 198.7425pt>
+<model.png, id=113, 466.1415pt x 198.7425pt>
 File: model.png Graphic file (type png)
  <use model.png>
-Package pdftex.def Info: model.png used on input line 369.
+Package pdftex.def Info: model.png used on input line 388.
 (pdftex.def)             Requested size: 372.9137pt x 158.9942pt.
 
-Overfull \hbox (27.9137pt too wide) in paragraph at lines 369--370
+Overfull \hbox (27.9137pt too wide) in paragraph at lines 388--389
  [][] 
  []
 
-[12 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/score.png>]
-[13 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/model.png>]
-[14] (C:\Users\hacker\Desktop\Êñ∞Âª∫Êñá‰ª∂Â§π\DogsVsCats\ctex\CatsVsDogs.aux) )
+[13 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/score.png>]
+[14 <C:/Users/hacker/Desktop/Êñ∞Âª∫Êñá‰ª∂Â§π/DogsVsCats/ctex/model.png>]
+[15] (C:\Users\hacker\Desktop\Êñ∞Âª∫Êñá‰ª∂Â§π\DogsVsCats\ctex\CatsVsDogs.aux) )
  
 Here is how much of TeX's memory you used:
- 3201 strings out of 495354
- 44850 string characters out of 3183523
+ 3215 strings out of 495354
+ 45132 string characters out of 3183523
  105163 words of memory out of 3000000
- 6323 multiletter control sequences out of 15000+200000
+ 6336 multiletter control sequences out of 15000+200000
  31392 words of font info for 107 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  27i,7n,29p,933b,764s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -442,9 +464,9 @@ iKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/latex/CTEX/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmr10.pfb><D:/latex/CTEX/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmr12.pfb><D:/latex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D
 :/latex/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on CatsVsDogs.pdf (14 pages, 4857416 bytes).
+Output written on CatsVsDogs.pdf (15 pages, 4989920 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
+ 254 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
